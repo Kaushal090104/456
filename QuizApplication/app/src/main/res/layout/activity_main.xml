@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/background_image">
+
+    <!-- Heading -->
+    <TextView
+        android:id="@+id/textViewHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiz Application"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Question and Options -->
+    <ScrollView
+        android:id="@+id/scrollViewQuiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewHeading"
+        android:layout_marginTop="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question"
+                android:textSize="18sp"
+                android:layout_marginTop="24dp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewQuestion"
+                android:layout_marginTop="16dp">
+
+                <RadioButton
+                    android:id="@+id/radioButtonOption1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Option 1" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonOption2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Option 2" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonOption3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Option 3" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonOption4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Option 4" />
+            </RadioGroup>
+        </RelativeLayout>
+    </ScrollView>
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_below="@id/scrollViewQuiz"
+        android:layout_marginTop="24dp"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Result -->
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_below="@id/buttonSubmit"
+
+        android:layout_marginBottom="2dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
+
+    <!-- Correct Answers -->
+    <TextView
+        android:id="@+id/textViewAnswers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/textViewResult"
+        android:layout_centerHorizontal="true"
+
+        android:visibility="gone" />
+
+    <!-- Watermark -->
+    <TextView
+        android:id="@+id/textViewWatermark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Developed by Kaushal Gajrani"
+        android:textColor="#888888"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:padding="8dp" />
+
+</RelativeLayout>
